@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="22.1.0">
+  <diagram name="URL Shortener Architecture" id="url-shortener">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="URL Shortener - System Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="550" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clients" value="Clients (Web, Mobile, API)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="1400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" value="CDN / Edge Cache (for hot URLs - 302 redirect)" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="190" width="1400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="load-balancer" value="Load Balancer (Geographic Routing)" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="270" width="1400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api-gateway" value="API Gateway (Auth, Rate Limiting)" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="350" width="1400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="services" value="Core Services" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="1400" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="shorten-svc" value="URL Shortening&#xa;Service&#xa;(Create short URLs)" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="150" y="480" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="redirect-svc" value="Redirection&#xa;Service&#xa;(Resolve &amp; Redirect)&#xa;[READ HEAVY]" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="310" y="480" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics-svc" value="Analytics Service&#xa;(Click Tracking)" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="470" y="480" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="user-svc" value="User Service&#xa;(Accounts, API Keys)" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="630" y="480" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="custom-alias-svc" value="Custom Alias&#xa;Service" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="790" y="480" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="expiration-svc" value="Expiration&#xa;Service&#xa;(Cleanup Job)" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="950" y="480" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="encoding-algo" value="URL Encoding (Base62):&#xa;1. Get next ID from counter&#xa;2. Convert ID to base62&#xa;3. Characters: [a-zA-Z0-9]&#xa;4. 7 chars = 62^7 = 3.5T URLs&#xa;Example: ID 12345 → base62 → 'dnh'&#xa;&#xa;Distributed Counter:&#xa;• Zookeeper or Redis&#xa;• Each server gets ID range&#xa;• No collisions" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="150" y="570" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="redirect-flow" value="Redirect Flow (Critical Path):&#xa;1. Extract short code from URL&#xa;2. Check Redis cache (90% hit)&#xa;3. If miss, query database&#xa;4. Update cache (TTL)&#xa;5. HTTP 302 redirect&#xa;6. Async: log click to Kafka&#xa;Target: &lt; 50ms latency" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="570" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka" value="Message Queue (Kafka)&#xa;Click events for analytics" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="750" y="580" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-layer" value="Data Storage" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="720" width="1400" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="postgres" value="PostgreSQL&#xa;url_mappings table&#xa;(short_code, long_url)" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="150" y="770" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="Redis Cache&#xa;(Hot URLs - 90% hit rate)&#xa;Key: short_code&#xa;Value: long_url" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="320" y="770" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cassandra" value="Cassandra / ClickHouse&#xa;Click analytics&#xa;(time-series data)" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="510" y="770" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zookeeper" value="Zookeeper / Redis&#xa;(Distributed Counter&#xa;for ID generation)" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="700" y="770" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="S3&#xa;(QR codes,&#xa;Analytics reports)" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="870" y="770" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="stats" value="System Stats:&#xa;• Read:Write = 100:1&#xa;• Target latency: &lt; 50ms&#xa;• Cache hit rate: 90%+&#xa;• Scale: Billions of URLs&#xa;• Throughput: 10K+ RPS" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="480" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="features" value="Key Features:&#xa;• URL shortening&#xa;• Fast redirection (&lt;50ms)&#xa;• Custom aliases&#xa;• URL expiration&#xa;• Click analytics&#xa;• QR code generation&#xa;• User accounts&#xa;• API access&#xa;• Bulk shortening&#xa;• Link preview" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="620" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="db-schema" value="Database Schema:&#xa;&#xa;url_mappings:&#xa;  id: BIGINT (PK)&#xa;  short_code: VARCHAR(10) UNIQUE&#xa;  long_url: TEXT&#xa;  user_id: BIGINT&#xa;  created_at: TIMESTAMP&#xa;  expires_at: TIMESTAMP&#xa;  is_active: BOOLEAN&#xa;&#xa;Index on short_code for fast lookup" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="150" y="930" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="scaling-note" value="Scalability:&#xa;• Stateless services (horizontal scaling)&#xa;• Database sharding by short_code&#xa;• Redis cluster for caching&#xa;• CDN for ultra-hot URLs&#xa;• Multi-region deployment&#xa;• Read replicas for DB&#xa;• Asynchronous analytics" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="930" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tradeoffs" value="Design Trade-offs:&#xa;&#xa;Counter vs Hash:&#xa;✓ Counter: No collisions, predictable&#xa;✗ Counter: Sequential (less secure)&#xa;&#xa;301 vs 302 Redirect:&#xa;✓ 302: Track every click&#xa;✗ 302: Slightly slower (no browser cache)&#xa;&#xa;Cache TTL:&#xa;• Long TTL: Less DB load&#xa;• Short TTL: Fresher data" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d6b656;align=left;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="770" y="930" width="270" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
