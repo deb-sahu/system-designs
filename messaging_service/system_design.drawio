@@ -1,0 +1,132 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="22.1.0" etag="system-design" type="device">
+  <diagram name="Messaging Service Architecture" id="messaging-service">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="Messaging Service - System Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="20" width="400" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Client Layer -->
+        <mxCell id="client-layer" value="Client Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="1400" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="web-client" value="Web Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="150" y="110" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mobile-client" value="Mobile Apps&#xa;(iOS/Android)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="110" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="desktop-client" value="Desktop Apps" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="450" y="110" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- API Gateway -->
+        <mxCell id="api-gateway" value="API Gateway&#xa;(Load Balancer, Auth, Rate Limiting)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="1400" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Microservices Layer -->
+        <mxCell id="services-layer" value="Microservices Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="1400" height="280" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="auth-service" value="Authentication&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="130" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="user-service" value="User Service&#xa;(Profiles, Contacts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="280" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="message-service" value="Message Service&#xa;(Core Logic)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="430" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="websocket-service" value="WebSocket/&#xa;Connection Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="580" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="group-service" value="Group Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="730" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="notification-service" value="Notification&#xa;Service&#xa;(Push, Email)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="880" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="media-service" value="Media Service&#xa;(Upload, CDN)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Message Queue -->
+        <mxCell id="message-queue" value="Message Queue (Kafka/RabbitMQ)&#xa;(Reliable Message Delivery, Pub-Sub)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="130" y="450" width="1030" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Data Layer -->
+        <mxCell id="data-layer" value="Data Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="640" width="1400" height="280" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="postgres" value="PostgreSQL&#xa;(User Data, Groups)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="150" y="700" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cassandra" value="Cassandra&#xa;(Message History)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="320" y="700" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="redis" value="Redis Cache&#xa;(Sessions, Status,&#xa;Recent Messages)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="490" y="700" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s3" value="S3/Object Storage&#xa;(Media Files)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="660" y="700" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cdn" value="CDN&#xa;(Media Delivery)" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="830" y="700" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- External Services -->
+        <mxCell id="external-services" value="External Services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="980" width="1400" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="fcm" value="Firebase Cloud&#xa;Messaging (FCM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1020" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="apns" value="Apple Push&#xa;Notification (APNs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1020" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="monitoring" value="Monitoring&#xa;(Prometheus,&#xa;Grafana)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1020" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Key Features Box -->
+        <mxCell id="features" value="Key Features:&#xa;• Real-time messaging (WebSocket)&#xa;• Group chat&#xa;• End-to-end encryption&#xa;• Message delivery receipts&#xa;• Online/offline status&#xa;• Multimedia support&#xa;• Push notifications" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="340" width="250" height="170" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="web-client" target="api-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-gateway" target="message-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

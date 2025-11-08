@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="22.1.0">
+  <diagram name="Streaming Service Architecture" id="streaming">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Streaming Service - Video/Audio Platform Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="500" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clients" value="Clients (Web, Mobile, TV, Console)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="1400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" value="CDN (Edge Servers - 90% of traffic)&#xa;CloudFront / Akamai / Cloudflare" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="1400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-gateway" value="API Gateway (Auth, Rate Limiting)" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="1400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="services" value="Microservices" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="390" width="1400" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="user-svc" value="User Service" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="130" y="430" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="content-svc" value="Content&#xa;Management" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="270" y="430" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="video-proc" value="Video Processing&#xa;Pipeline" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="410" y="430" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="transcode" value="Transcoding&#xa;Service" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="550" y="430" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="recommend" value="Recommendation&#xa;Engine (ML)" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="690" y="430" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="search-svc" value="Search Service&#xa;(Elasticsearch)" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="830" y="430" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics" value="Analytics&#xa;Service" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="970" y="430" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="encoding-detail" value="Encoding: Multiple resolutions&#xa;4K, 1080p, 720p, 480p, 360p&#xa;HLS/DASH adaptive streaming" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;" vertex="1" parent="1">
+          <mxGeometry x="410" y="510" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="data-layer" value="Data Layer" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="680" width="1400" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="postgres" value="PostgreSQL&#xa;(User/Metadata)" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="150" y="730" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mongodb" value="MongoDB&#xa;(Video Metadata)" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="730" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="Redis Cache&#xa;(Metadata,&#xa;Sessions)" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="450" y="730" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="S3 / Object Storage&#xa;(Encoded Videos,&#xa;Thumbnails)" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="730" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="warehouse" value="Data Warehouse&#xa;(Redshift/BigQuery)&#xa;Analytics" style="shape=cylinder3;fillColor=#e1d5e7;strokeColor=#9673a6;size=15;" vertex="1" parent="1">
+          <mxGeometry x="770" y="730" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="features" value="Key Features:&#xa;• Adaptive bitrate streaming&#xa;• Multi-device support&#xa;• Offline downloads (DRM)&#xa;• Personalized recommendations&#xa;• Content search&#xa;• Watch history &amp; resume&#xa;• Subtitles/Audio tracks&#xa;• QoS monitoring" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="430" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-note" value="Video Processing Flow:&#xa;1. Upload raw video → S3&#xa;2. Trigger transcoding&#xa;3. Encode multiple formats&#xa;4. Generate thumbnails&#xa;5. Store in S3&#xa;6. Invalidate CDN cache&#xa;7. Index for search" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="640" width="250" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
