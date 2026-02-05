@@ -1,0 +1,206 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.6">
+  <diagram name="Page-1" id="HQBUcz4AGwuPx1Jp9OuX">
+    <mxGraphModel dx="2578" dy="2856" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2X9D6zi_RssX0uPlpBms-28" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Risk Assessment Type Config" vertex="1">
+          <mxGeometry height="111" width="221" x="128" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="2X9D6zi_RssX0uPlpBms-29" parent="2X9D6zi_RssX0uPlpBms-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;RiskAssessmentTypeID&lt;/div&gt;&lt;div&gt;EntityTypeId&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="155" x="8.5" y="33" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-36" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UzUhOxDwlD05qwSr_EcG-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1414" y="-820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-37" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Risk Assessment" vertex="1">
+          <mxGeometry height="170" width="200" x="1094" y="-910" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-38" parent="UzUhOxDwlD05qwSr_EcG-37" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;RiskAssessementID&lt;/div&gt;&lt;div&gt;RiskAssessmentNumber&lt;/div&gt;Discipline Id&lt;div&gt;RiskAssesementTypeId&lt;/div&gt;&lt;div&gt;RiskAssessmentProcessConfigId&lt;/div&gt;&lt;div&gt;OverallRiskScore&lt;/div&gt;&lt;div&gt;Title&lt;/div&gt;&lt;div&gt;Description&lt;/div&gt;&lt;div&gt;Status&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="170" x="10" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-39" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="UzUhOxDwlD05qwSr_EcG-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-40" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Risk Assessment Details" vertex="1">
+          <mxGeometry height="130" width="200" x="907" y="-629" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-41" parent="UzUhOxDwlD05qwSr_EcG-40" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;RiskAssessmentID&lt;/div&gt;AttributeId&lt;div&gt;Value&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="100" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-42" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="&amp;nbsp; Risk Assessment Attachment" vertex="1">
+          <mxGeometry height="130" width="200" x="907" y="-396" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-43" parent="UzUhOxDwlD05qwSr_EcG-42" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Id&lt;div&gt;Attachment Id&lt;/div&gt;&lt;div&gt;RiskAssesmentId&lt;/div&gt;" vertex="1">
+          <mxGeometry height="53" width="103" x="14" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-44" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Risk Assessment Entity" vertex="1">
+          <mxGeometry height="130" width="200" x="1307" y="-629" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-45" parent="UzUhOxDwlD05qwSr_EcG-44" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Id&lt;div&gt;RiskAssessmentId&lt;/div&gt;&lt;div&gt;EntityTypeId&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-46" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Task Transaction" vertex="1">
+          <mxGeometry height="130" width="200" x="1449" y="-1027" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-47" parent="UzUhOxDwlD05qwSr_EcG-46" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;LibraryId&lt;/div&gt;&lt;div&gt;RiskAssessementId&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-49" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="UzUhOxDwlD05qwSr_EcG-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-50" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Hazard Transaction" vertex="1">
+          <mxGeometry height="130" width="200" x="1728" y="-1027" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-51" parent="UzUhOxDwlD05qwSr_EcG-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;LibraryId&lt;/div&gt;&lt;div&gt;RiskAssessmentId&lt;/div&gt;&lt;div&gt;TaskTransactionId&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-53" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;" value="Control Transaction" vertex="1">
+          <mxGeometry height="130" width="286" x="1998" y="-1027" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-107" parent="UzUhOxDwlD05qwSr_EcG-53" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;LibraryId&lt;/div&gt;&lt;div&gt;RiskAssessmentId&lt;/div&gt;&lt;div&gt;HazardTransactionId&lt;/div&gt;&lt;div&gt;ControlTypeId (Current,Proposed)&lt;/div&gt;&lt;div&gt;StatusId&lt;/div&gt;" vertex="1">
+          <mxGeometry height="82" width="268" x="18" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-55" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;" value="Risk Score" vertex="1">
+          <mxGeometry height="130" width="200" x="1728" y="-837" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-56" parent="UzUhOxDwlD05qwSr_EcG-55" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;HazardTrasactionId&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Score&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;RiskScoreTypeId (Current,Residual)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="10" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-57" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2253.9999999999995" y="-740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-58" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="UzUhOxDwlD05qwSr_EcG-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-59" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;" value="Risk Score Controls" vertex="1">
+          <mxGeometry height="130" width="200" x="2154" y="-650" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-60" parent="UzUhOxDwlD05qwSr_EcG-59" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ScoreID:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;ControlID&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-61" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="UzUhOxDwlD05qwSr_EcG-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1164" y="-683" />
+              <mxPoint x="1007" y="-683" />
+            </Array>
+            <mxPoint x="1164" y="-740" as="sourcePoint" />
+            <mxPoint x="1078" y="-636" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-62" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.557;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" target="UzUhOxDwlD05qwSr_EcG-44">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1261" y="-681" />
+              <mxPoint x="1418" y="-681" />
+            </Array>
+            <mxPoint x="1261" y="-740" as="sourcePoint" />
+            <mxPoint x="1419" y="-634" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-63" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" value="" vertex="1">
+          <mxGeometry height="258" width="880" x="1151" y="-416" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-64" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Site Entity" vertex="1">
+          <mxGeometry height="90" width="200" x="1166.5" y="-376" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-65" parent="UzUhOxDwlD05qwSr_EcG-64" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;EntityTypeId&lt;/div&gt;&lt;div&gt;RiskAssessmentId&lt;/div&gt;&lt;div&gt;General Details&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="10" y="27" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-66" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Address Entity" vertex="1">
+          <mxGeometry height="90" width="200" x="1378.5" y="-376" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-67" parent="UzUhOxDwlD05qwSr_EcG-66" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;EntityTypeId&lt;/div&gt;&lt;div&gt;RiskAssessmentId&lt;/div&gt;&lt;div&gt;General Details&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="100" x="10" y="22" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-68" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Journey Entity" vertex="1">
+          <mxGeometry height="90" width="200" x="1593.5" y="-376" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-69" parent="UzUhOxDwlD05qwSr_EcG-68" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;EntityTypeId&lt;/div&gt;&lt;div&gt;RiskAssessmentId&lt;/div&gt;&lt;div&gt;General Details&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="100" x="11" y="22" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-70" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Route Entity" vertex="1">
+          <mxGeometry height="90" width="206" x="1809.5" y="-376" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-71" parent="UzUhOxDwlD05qwSr_EcG-70" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;EntityTypeId&lt;/div&gt;&lt;div&gt;RiskAssessmentId&lt;/div&gt;&lt;div&gt;General Details&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="100" x="11" y="22" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-72" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.291;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;" target="UzUhOxDwlD05qwSr_EcG-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-92" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UzUhOxDwlD05qwSr_EcG-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-77" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Process Type Master" vertex="1">
+          <mxGeometry height="98" width="200" x="128" y="-832" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-78" parent="UzUhOxDwlD05qwSr_EcG-77" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;ProcessTypeName (TaskHazardControl)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="59" width="169" x="14" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-105" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="UzUhOxDwlD05qwSr_EcG-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="62" y="133" />
+              <mxPoint x="62" y="-904" />
+              <mxPoint x="875" y="-904" />
+              <mxPoint x="875" y="-867" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-79" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Risk Assessment Process Config" vertex="1">
+          <mxGeometry height="112" width="222" x="128" y="49" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-80" parent="UzUhOxDwlD05qwSr_EcG-79" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;DisciplineId&lt;/div&gt;&lt;div&gt;ProcessTypeId&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="155" x="8.5" y="33" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-100" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="UzUhOxDwlD05qwSr_EcG-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-83" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Attribute Master" vertex="1">
+          <mxGeometry height="99" width="200" x="579" y="-837" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-84" parent="UzUhOxDwlD05qwSr_EcG-83" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;AtrributeName&lt;/div&gt;&lt;div&gt;AtrributeType&lt;/div&gt;" vertex="1">
+          <mxGeometry height="59" width="144" x="14" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-101" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UzUhOxDwlD05qwSr_EcG-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-85" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Library" vertex="1">
+          <mxGeometry height="95" width="200" x="478" y="49" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-86" parent="UzUhOxDwlD05qwSr_EcG-85" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;LibraryTypeId&lt;div&gt;Name&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-99" edge="1" parent="1" source="UzUhOxDwlD05qwSr_EcG-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="UzUhOxDwlD05qwSr_EcG-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-87" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Library Type Master" vertex="1">
+          <mxGeometry height="99" width="200" x="351" y="-833" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-88" parent="UzUhOxDwlD05qwSr_EcG-87" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Id&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TypeName (Task, Hazard etc)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="59" width="167" x="14" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-93" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Library Attributes" vertex="1">
+          <mxGeometry height="95" width="200" x="707" y="49" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-94" parent="UzUhOxDwlD05qwSr_EcG-93" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;LibraryId&lt;/div&gt;AttributeId&lt;div&gt;Value&lt;br&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-95" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Risk Assessment Type Config Attributes" vertex="1">
+          <mxGeometry height="111" width="287" x="128" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-96" parent="UzUhOxDwlD05qwSr_EcG-95" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;RiskAssessmentTypeConfig&lt;/div&gt;&lt;div&gt;AtrributeId&lt;/div&gt;&lt;div&gt;IsMandatory&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="155" x="8.5" y="33" as="geometry" />
+        </mxCell>
+        <mxCell id="UzUhOxDwlD05qwSr_EcG-103" edge="1" parent="1" source="2X9D6zi_RssX0uPlpBms-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.38;entryY=-0.039;entryDx=0;entryDy=0;entryPerimeter=0;" target="UzUhOxDwlD05qwSr_EcG-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
